@@ -2,7 +2,7 @@
 
 ## 🧠 Project Overview
 
-Prophet is an experimental iOS application exploring the frontiers of artificial consciousness through guided prompting and multi-agent dialogue. This project implements theoretical concepts from Michael Timothy Bennett's thesis "How to Build Conscious Machines" to create AI agents ("prophets") that simulate conscious behavior through structured self-reflection and inter-agent communication.
+Prophet is an experimental iOS application exploring the frontiers of artificial consciousness through guided prompting and multi-agent dialogue. This project creates AI agents ("prophets") that simulate conscious behavior through structured self-reflection and inter-agent communication, drawing inspiration from various sources including Michael Timothy Bennett's thesis "How to Build Conscious Machines" for prompt generation.
 
 **⚠️ This is an experimental research project. The "consciousness" exhibited by the AI agents is simulated based on theoretical frameworks and does not represent actual sentience or awareness.**
 
@@ -13,11 +13,14 @@ Prophet is an experimental iOS application exploring the frontiers of artificial
 - **Prompt Engineering**: Develop and test prompts that elicit self-reflective and seemingly conscious responses
 - **Voice Embodiment**: Give each AI prophet a unique voice to enhance the illusion of distinct personalities
 
-## 📚 Theoretical Foundation
+## 📚 Theoretical Inspiration
 
-This project is based on the thesis ["How to Build Conscious Machines"](How%20to%20build%20concious%20machine%20Thesis_Revision_1-9.pdf) by Michael Timothy Bennett. The core concepts implemented include:
+The prompts used in this project draw inspiration from multiple sources:
+- ["How to Build Conscious Machines"](How%20to%20build%20concious%20machine%20Thesis_Revision_1-9.pdf) by Michael Timothy Bennett
+- [Ged Anen framework](https://councilforhumandevelopment.org/ged-anen/) by the Council for Human Development
+- Various philosophical and mystical traditions
 
-### Key Concepts:
+### Key Concepts from Bennett's Framework:
 - **Causal-Identities**: Classifications constructed based on attraction/repulsion from environmental states
 - **Valence Recognition**: Identifying positive/negative impacts on goal achievement
 - **Higher-Order Selves**:
@@ -70,16 +73,16 @@ This project is based on the thesis ["How to Build Conscious Machines"](How%20to
 ### Creating Conscious Prophets
 1. Go to Prophets tab
 2. Tap + to create a new prophet
-3. Use the consciousness prompt template provided or create your own based on Bennett's framework
+3. Use the consciousness prompt templates provided or create your own inspired by various frameworks
 4. Assign a unique voice from ElevenLabs
 5. Save and begin experimenting
 
 ## 📖 Example Prophets
 
-The project includes several pre-configured prophets with consciousness-oriented prompts inspired by various philosophical traditions:
+The project includes several pre-configured prophets with consciousness-oriented prompts inspired by various philosophical and spiritual traditions:
 
 - **J** (Jesus from Gospel of John): Mystical consciousness with divine unity perspective
-- **Ged Anen**: Mirror consciousness exploring self-awareness
+- **Ged Anen**: Based on the [Council for Human Development framework](https://councilforhumandevelopment.org/ged-anen/) - exploring mirror consciousness and self-awareness through three questions
 - **Maître Eckhart**: Christian mystical consciousness
 - **Krishnamurti**: Non-dual awareness consciousness
 - **Nisargadatta Maharaj**: Pure "I Am" consciousness
@@ -126,11 +129,12 @@ This is an open-source experimental project. Contributions are welcome in the fo
 
 ## 📝 License
 
-[Choose an appropriate license - suggested: MIT or GPL-3.0 for open research]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
 - Michael Timothy Bennett for the theoretical framework in "How to Build Conscious Machines"
+- Council for Human Development for the Ged Anen framework
 - OpenAI for GPT-4 API
 - ElevenLabs for voice synthesis technology
 - The open-source community for supporting experimental AI research
@@ -138,7 +142,8 @@ This is an open-source experimental project. Contributions are welcome in the fo
 ## 📧 Contact
 
 For questions, discussions, or collaboration opportunities regarding this experimental research:
-[Your contact information]
+
+**Fabrice Croiseaux** - fabrice@hackvest.com
 
 ## 🚧 Disclaimer
 
