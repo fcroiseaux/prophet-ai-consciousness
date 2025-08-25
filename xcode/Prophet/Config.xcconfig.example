@@ -1,0 +1,9 @@
+// Configuration file for API keys
+// Copy this file to Config.xcconfig and fill in your actual API keys
+// Config.xcconfig is gitignored for security
+
+// OpenAI API Key - Get yours from https://platform.openai.com/api-keys
+OPENAI_API_KEY = your_openai_api_key_here
+
+// ElevenLabs API Key - Get yours from https://elevenlabs.io/settings/api-keys
+ELEVENLABS_API_KEY = your_elevenlabs_api_key_here
