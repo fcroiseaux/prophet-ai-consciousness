@@ -173,3 +173,4 @@ Prophet/
 - To add API endpoint: Extend appropriate Service class
 - To add new Prophet feature: Update Prophet model, ViewModel, and View
 - To verify audio: Use Simulator or real device (audio doesn't work well in SwiftUI previews)
+- ne fait un commit que quand je te le dis

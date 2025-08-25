@@ -107,6 +107,7 @@ class ElevenLabsService: NSObject {
         
         // Store the callback for the delegate
         self.streamDataHandler = onDataReceived
+        self.accumulatedAudioData = Data() // Initialize accumulation buffer
         
         let session = URLSession(configuration: .default, delegate: self, delegateQueue: .main)
         
@@ -122,13 +123,19 @@ class ElevenLabsService: NSObject {
     
     private var streamDataHandler: ((Data) -> Void)?
     private var currentStreamTask: URLSessionDataTask?
+    private var accumulatedAudioData: Data?
 }
 
 extension ElevenLabsService: URLSessionDataDelegate {
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
-        // This is called as chunks arrive
+        // Accumulate audio chunks instead of calling handler immediately
         print("Received audio chunk: \(data.count) bytes")
-        streamDataHandler?(data)
+        
+        if accumulatedAudioData == nil {
+            accumulatedAudioData = Data()
+        }
+        accumulatedAudioData?.append(data)
+        print("Total accumulated audio data: \(accumulatedAudioData?.count ?? 0) bytes")
     }
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
@@ -137,12 +144,21 @@ extension ElevenLabsService: URLSessionDataDelegate {
         if let error = error {
             streamContinuation?.resume(throwing: error)
         } else {
+            // Only call the completion handler once with the complete audio data
+            if let completeAudioData = accumulatedAudioData, !completeAudioData.isEmpty {
+                print("Calling completion handler with complete audio data: \(completeAudioData.count) bytes")
+                streamDataHandler?(completeAudioData)
+            } else {
+                print("Warning: No audio data accumulated")
+            }
             streamContinuation?.resume()
         }
         
+        // Clean up
         streamDataHandler = nil
         currentStreamTask = nil
         streamContinuation = nil
+        accumulatedAudioData = nil
     }
     
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive response: URLResponse, completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {

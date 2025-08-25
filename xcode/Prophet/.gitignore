@@ -1,0 +1,12 @@
+# Xcode
+*.xcuserdata
+*.xcuserstate
+build/
+DerivedData/
+xcuserdata/
+
+# Configuration files with sensitive data
+Config.xcconfig
+
+# macOS
+.DS_Store
